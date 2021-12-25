@@ -2,10 +2,20 @@ import React, { useState } from "react";
 import AddButton from "./AddButton";
 import Colors from "./Colors";
 import Title from "./Title";
+import { useSelector } from "react-redux";
+import { selectItems } from "../redux/note/noteSlice";
 
 function TextArea() {
   const [text, setText] = useState("");
   const [title, setTitle] = useState("");
+
+  const allNotes = useSelector(selectItems);
+
+  React.useEffect(() => {
+    setText("");
+    setTitle("");
+  }, [allNotes]);
+
   return (
     <>
       <Title title={title} setTitle={setTitle} />

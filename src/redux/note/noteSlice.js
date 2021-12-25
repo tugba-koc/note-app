@@ -33,14 +33,16 @@ export const noteSlice = createSlice({
     ],
   },
   reducers: {
-    addNote: (state,action)=>{
-      state.items.push(action.payload)
-    }
+    addNote: (state, action) => {
+      if (action.payload.title.length > 0 && action.payload.text.length > 0) {
+        state.items.push(action.payload);
+      }
+    },
   },
 });
 
 export const selectColor = (state) => state.note.color;
 export const selectItems = (state) => state.note.items;
 
-export const {addNote}=noteSlice.actions;
+export const { addNote } = noteSlice.actions;
 export default noteSlice.reducer;
