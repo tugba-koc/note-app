@@ -7,34 +7,34 @@ export const noteSlice = createSlice({
     color: [
       {
         id: 1,
-        name: "Red",
-        color: "red",
+        name: "Purple",
+        color: "#aa99ff",
       },
       {
         id: 2,
         name: "Blue",
-        color: "blue",
+        color: "#badbed",
       },
       {
         id: 3,
         name: "Green",
-        color: "green",
+        color: "#ccffaa",
       },
       {
         id: 4,
-        name: "Yellow",
-        color: "yellow",
+        name: "Pink",
+        color: "#ffbbdd",
       },
       {
         id: 5,
-        name: "Purple",
-        color: "purple",
+        name: "Red",
+        color: "#cc8099",
       },
     ],
   },
   reducers: {
     addNote: (state, action) => {
-      if (action.payload.title.length > 0 && action.payload.text.length > 0) {
+      if (action.payload.title.length > 0 && action.payload.text.length > 0 && action.payload.color) {
         state.items.push(action.payload);
       }
     },

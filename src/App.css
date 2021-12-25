@@ -77,3 +77,11 @@ button.add {
   bottom: 10px;
   left: 10px;
 }
+
+/* ADD BUTTON */
+
+button.btn-success {
+  background-color: #e1ffb9;
+  color: rgb(36, 36, 36);
+  
+}

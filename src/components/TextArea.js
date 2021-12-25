@@ -8,13 +8,19 @@ import { selectItems } from "../redux/note/noteSlice";
 function TextArea() {
   const [text, setText] = useState("");
   const [title, setTitle] = useState("");
+  const [color, setColor] = useState("");
 
   const allNotes = useSelector(selectItems);
 
   React.useEffect(() => {
     setText("");
     setTitle("");
+    setColor("");
   }, [allNotes]);
+
+  const handleColor = (e) => {
+    setColor(e);
+  };
 
   return (
     <>
@@ -28,8 +34,12 @@ function TextArea() {
         ></textarea>
         <label htmlFor="floatingTextarea2">Enter your note here..</label>
         <div className="d-flex flex-row align-items-center">
-          <Colors />
-          <AddButton title={title} text={text} />
+          <div>
+            <Colors handleColor={handleColor} />
+          </div>
+          <div>
+            <AddButton title={title} text={text} color={color} />
+          </div>
         </div>
       </div>
     </>

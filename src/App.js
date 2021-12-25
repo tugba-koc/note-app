@@ -10,13 +10,19 @@ function App() {
   const allNotes = useSelector(selectItems);
   return (
     <div className="App">
-      <div className="d-flex vh-100 align-items-center justify-content-center flex-column">
+      <div
+        className={`d-flex align-items-center justify-content-center flex-column ${
+          allNotes && "vh-100"
+        }`}
+      >
         <Header />
         <FilterBar />
         <TextArea />
       </div>
-      <div className="w-75 d-flex justify-content-start mx-auto"> {allNotes && <AddedNote />} </div>
-      
+      <div className="w-75 d-flex justify-content-start mx-auto">
+        {" "}
+        {allNotes && <AddedNote />}{" "}
+      </div>
     </div>
   );
 }
