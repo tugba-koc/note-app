@@ -13,7 +13,7 @@ function Colors() {
           key={item.id}
           style={{ backgroundColor: item.color, width: "25px" }}
         >
-          <span className="invisible">sdvsdfvf</span>
+          <span className="invisible">Invisible part</span>
         </div>
       ))}
     </div>
