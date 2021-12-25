@@ -83,5 +83,9 @@ button.add {
 button.btn-success {
   background-color: #e1ffb9;
   color: rgb(36, 36, 36);
-  
+}
+
+button.btn-success:hover, button.btn-success:focus  {
+  background-color: #affffb;
+  color: rgb(36, 36, 36);
 }
