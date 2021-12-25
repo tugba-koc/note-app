@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +31,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* APP */
+
+.App {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    225deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(101, 254, 22, 0.5105392498796393) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+/* HEADER */
+
+.header {
+  color: rgb(66, 66, 66);
+}
+
+/* FILTER BAR */
+
+input {
+  border-radius: 5px;
+  height: 40px;
+  outline: none;
+}
+
+/* TEXT AREA */
+
+.form-floating {
+  display: inline-block;
+  position: relative;
+}
+
+button.add {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.colors {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
