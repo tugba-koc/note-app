@@ -8,13 +8,14 @@ function Colors() {
   return (
     <div className="colors list-unstyled d-flex flex-row">
       {colors.map((item) => (
-        <div
-          className="ms-2 rounded-circle"
+        <a
+          href="##"
+          className="rounded-circle ms-2"
           key={item.id}
-          style={{ backgroundColor: item.color, width: "25px" }}
+          style={{ backgroundColor: item.color, width: "25px", height: "25px" }}
         >
           <span className="invisible">Invisible part</span>
-        </div>
+        </a>
       ))}
     </div>
   );
